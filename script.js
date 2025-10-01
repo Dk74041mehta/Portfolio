@@ -147,6 +147,22 @@ themeButton.addEventListener("click", () => {
 });
 
 //swiper
+// let swiperPortfolio = new Swiper(".portfolio-container", {
+//   cssMode: true,
+//   loop: true,
+
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
+
+// for auto
 let swiperPortfolio = new Swiper(".portfolio-container", {
   cssMode: true,
   loop: true,
@@ -160,7 +176,17 @@ let swiperPortfolio = new Swiper(".portfolio-container", {
     el: ".swiper-pagination",
     clickable: true,
   },
+
+  autoplay: {
+    delay: 2000, // 2 seconds delay
+    disableOnInteraction: false, // user click kare toh bhi autoplay continue rahe
+  },
+
+  speed: 3000, // animation transition duration (0.8s smooth slide)
+    effect: "slide", // normal slide effect
+
 });
+
 
 let swiperTestimonial = new Swiper(".testimonial-container", {
   cssMode: true,
